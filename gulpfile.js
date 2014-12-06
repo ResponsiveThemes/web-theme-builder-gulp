@@ -150,7 +150,7 @@ gulp.task('serve:dist', ['build'], function () {
 });
 
 gulp.task('init', function () {
-  var directories = ['fonts', 'images', 'scripts', 'style'];
+  var directories = ['fonts', 'images', 'scripts', 'styles'];
   var appPath = path.join(__dirname, 'app');
   
   console.info(chalk.cyan('Creating scaffolding'));
