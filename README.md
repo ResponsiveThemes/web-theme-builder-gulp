@@ -1,27 +1,25 @@
 Quality web theme helper based in gulp
 ===================================
 
-This project provide a `gulp tasks` to create a web theme applying all the best practices require the new web applications require nowadays. 
+This project provide a `gulp tasks` to create a web theme applying all the best practices require the new web applications require nowadays.
 
 It has been heavily inspired by [Google Web Starter Kit](https://github.com/google/web-starter-kit), however it only provides the building tasks and organizing conventions, it does not provide any additional resource. It is though to start a web theme development (front-end app) adding the stuff that you need, nothing is provided than the essentials to save your time to have to delete them.
 
 ## What it provides
 It provides a `gulpfile` with the next main tasks:
 
-* `init`: Create the directories scaffolding to organise your app assets. 
-* `serve`:  Starts a web server in the port 3000. You have to use it during the theme development.
-*  `build`:  Builds the production version of your theme. 
-*  `serve:dist`:  Starts a web server in the port 3000 with the production version of your theme.
-*  `clean`:  Cleans the output directories use for the other tasks
+* `init`: Create the directories scaffolding to organise your app assets.
+* `serve`: Starts a web server in the port 3000. You have to use it during the theme development.
+* `build`: Builds the production version of your theme.
+* `serve:dist`: Starts a web server in the port 3000 with the production version of your theme.
+* `clean`: Cleans the output directories use for the other tasks.
 
 ## Requirements
 
 To use this tool, you have to be available the next tools in your `path`, so the commands have to be found by the operative system; follow the specified order:
 
-1. `ruby`: Version 1.9 or greater, it may works wit a previous one, however it has not been tested. Refer to it in [ruby language website](https://www.ruby-lang.org/) or also you can consider use a ruby version manager as [rbenv](https://github.com/sstephenson/rbenv)
-2. `sass`: Ruby `sass`, you can install it after you have `ruby` installed, just executing in your command line `gem install sass`,  depending of your installation settings, you may need administration rights.
-3.  `nodejs`: Version 0.10 or greater. You can find more information on its [website](http://nodejs.org)
-4.  `gulp`:  you can install it after you have `nodejs` available through `npm`, just type `npm install -g gulp`
+1. `nodejs`: Version 0.10 or greater. You can find more information on its [website](http://nodejs.org).
+2. `gulp`: you can install it after you have `nodejs` available through `npm`, just type `npm install -g gulp`.
 
 ## How to start
 
@@ -31,10 +29,10 @@ Use you command line to go into the directory where you pull out these repositor
 
 1. Execute in your command line `npm install`; it could take a little bit time because it is installing all the dependencies that the `gulp tasks` need.
 2. Then if you pull this repository, you must delete a `hidden` folder named `.git`, to avoid noise with your job and be able to create your own git repository to track your web theme development.
-3. Execute `gulp init`. You will get some subdirectories into `app` directory, where you should organise all the assets accordingly, bear in mind that `styles` directory may contain `sass` and `css` files, and they can be used independently.
+3. Execute `gulp init`. You will get some subdirectories into `app` directory, where you should organise all the assets accordingly, bear in mind that `styles` directory may contain `scss` and `css` files, and they can be used independently.
 4. Execute `gulp serve` and you will have the provided blank index under the url: `http://localhost:3000`. To stop it, just press `ctrl-c`.
 
-You are ready to start to develop your web theme, when you make changes in the `css`, `sass` and `html` files, the browser will refresh automatically and you will see your changes without the hassle of have to refresh your browser, bear in mind that `javascript` files changes are not triggering the automatic refresh.
+You are ready to start to develop your web theme, when you make changes in the `css`, `scss` and `html` files, the browser will refresh automatically and you will see your changes without the hassle of have to refresh your browser, bear in mind that `javascript` files changes are not triggering the automatic refresh.
 
 __NOTE__ sometimes something may go wrong and the changes are not change, in that case restart the server, just close `gulp serve` and start it again.
 
