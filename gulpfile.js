@@ -81,13 +81,12 @@ gulp.task('styles', function () {
     'app/styles/**/*.css'
     ])
     .pipe(gulpPlugins.changed('styles', {extension: '.scss'}))
-    .pipe(gulpPlugins.rubySass({
-      style: 'expanded',
+    .pipe(gulpPlugins.sass({
       precision: 10
     })
     .on('error', console.error.bind(console))
   )
-  .pipe(gulpPlugins.autoprefixer({ browsers: AUTOPREFIXER_BROWSERS) })
+  .pipe(gulpPlugins.autoprefixer({ browsers: AUTOPREFIXER_BROWSERS }))
   .pipe(gulp.dest('.tmp/styles'))
   // Concatenate And Minify Styles
   .pipe(gulpPlugins.if('*.css', gulpPlugins.csso()))
