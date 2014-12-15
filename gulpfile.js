@@ -151,7 +151,7 @@ gulp.task('serve:dist', ['build'], function () {
 gulp.task('init', function () {
   var directories = ['fonts', 'images', 'scripts', 'styles'];
   var appPath = path.join(__dirname, 'app');
-  
+
   console.info(chalk.cyan('Creating scaffolding'));
   try {
     directories.forEach(function (subdirname) {
@@ -163,7 +163,7 @@ gulp.task('init', function () {
       'if you want to initialize, start a new one and execute init task before anything'));
     return;
   }
-  
+
    console.info(chalk.cyan('Initialization done!!'));
 });
 
