@@ -143,7 +143,7 @@ gulp.task('serve:dist', ['build'], function () {
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
     // https: true,
-    open: true, // Don't open the browser windows with the url when staring
+    open: true, // open the browser windows with the url when staring
     server: 'dist'
   });
 });
