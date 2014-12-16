@@ -1,5 +1,5 @@
 {
-  "name": "'theme-building-tool'",
+  "name": "theme-building-tool",
   "version": "0.1.0",
   "description": "A gulp file which helps to build a web theme using good practices",
   "keywords": [
