@@ -30,7 +30,7 @@ Use you command line to go into the directory where you pull out these repositor
 1. Execute in your command line `npm install`; it could take a little bit time because it is installing all the dependencies that the `gulp tasks` need.
 2. Then if you pull this repository, you must delete a `hidden` folder named `.git`, to avoid noise with your job and be able to create your own git repository to track your web theme development.
 3. Execute `gulp init`. You will get some subdirectories into `app` directory, where you should organise all the assets accordingly, bear in mind that `styles` directory may contain `scss` and `css` files, and they can be used independently.
-4. Execute `gulp serve` and you will have the provided blank index under the url: `http://localhost:3000`. To stop it, just press `ctrl-c`.
+4. Execute `gulp serve` and you will have the provided blank index under the url: `http://localhost:3000`, or a following port if `3000` port is already used, check the console output to see the port where the server is running. To stop it, just press `ctrl-c`.
 
 You are ready to start to develop your web theme, when you make changes in the `css`, `scss` and `html` files, the browser will refresh automatically and you will see your changes without the hassle of have to refresh your browser, bear in mind that `javascript` files changes are not triggering the automatic refresh.
 
