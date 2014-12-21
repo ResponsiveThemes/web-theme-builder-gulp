@@ -79,13 +79,12 @@ gulp.task('styles', function () {
   return gulp.src([
     'app/styles/*.scss',
     'app/styles/**/*.css'
-    ])
-    .pipe(gulpPlugins.changed('styles', {extension: '.scss'}))
-    .pipe(gulpPlugins.sass({
-      precision: 10
-    })
-    .on('error', console.error.bind(console))
-  )
+  ])
+  .pipe(gulpPlugins.changed('styles', {extension: '.scss'}))
+  .pipe(gulpPlugins.sass({
+    precision: 10,
+    errLogToConsole: true
+  }))
   .pipe(gulpPlugins.autoprefixer({ browsers: AUTOPREFIXER_BROWSERS }))
   .pipe(gulp.dest('.tmp/styles'))
   // Concatenate And Minify Styles
@@ -125,6 +124,7 @@ gulp.task('serve', ['styles'], function () {
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
     // https: true,
+    online: true,
     open: false, // Don't open the browser windows with the url when staring
     server: ['.tmp', 'app']
   });
@@ -143,6 +143,7 @@ gulp.task('serve:dist', ['build'], function () {
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
     // https: true,
+    online: true,
     open: true, // open the browser windows with the url when staring
     server: 'dist'
   });
